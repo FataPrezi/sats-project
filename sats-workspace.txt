@@ -1,0 +1,6 @@
+{
+    "folders": [{
+        "uri": "sftp://Massar-Laptop:Amadou Massar Sarr@localhost/sats",
+        "name": "SATS"
+    }]
+}
