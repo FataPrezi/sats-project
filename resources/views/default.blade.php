@@ -21,7 +21,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{asset('../public/asset/assets/img/apple-icon.png')}}">
-  <link rel="icon" type="image/png" href="{{asset('../public/asset/assets/img/favicon.png')}}">
+  <link rel="icon" type="image/png" href="{{asset('../public/asset/assets/img/favicon_2.png')}}"> 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     SATS
@@ -42,9 +42,9 @@
   <div> @include('navbar')</div>
   
    <div class="wrapper">
-    <div class="page-header clear-filter" filter-color="orange">
-       <div class="page-header-image" data-parallax="true" style="background-image:url({{asset('../public/asset/assets/img/header.jpg')}});">
-      </div> 
+     <div class="page-header clear-filter" filter-color="">
+       <div class="page-header-image" data-parallax="true" style="background-image:url({{asset('../public/asset/assets/img/wallpaper6.jpg')}});">
+      </div>  
       <div class="container">
         {{-- <div class="content-center brand">
            <img class="n-logo" src="{{asset('../public/asset/assets/img/now-logo.png')}}" alt=""> 
@@ -58,8 +58,9 @@
                 <h4>Carousel</h4>
               </div> --}}
               <br>
-              <br>
-              <div class="row justify-content-center">
+  <br>
+              @yield('content')
+              {{-- <div class="row justify-content-center">
                 <div class="col-lg-8 col-md-12">
                     <div class="bd-example">
                         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -70,14 +71,14 @@
                           </ol>
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img src="{{('../public/asset/assets/img/bg6.jpg')}}" class="d-block w-100" alt="...">
+                              <img src="{{('../public/asset/assets/img/port.jpg')}}" class="d-block w-100" alt="...">
                               <div class="carousel-caption d-none d-md-block">
                                 <h5>First slide label</h5>
                                 <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                               </div>
                             </div>
                             <div class="carousel-item">
-                              <img src="{{('../public/asset/assets/img/bg7.jpg')}}" class="d-block w-100" alt="...">
+                              <img src="{{('../public/asset/assets/img/docker2.jpg')}}" class="d-block w-100" alt="...">
                               <div class="carousel-caption d-none d-md-block">
                                 <h5>Second slide label</h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -102,7 +103,7 @@
                         </div>
                       </div>
                 </div>
-              </div>
+              </div> --}}
            
           {{-- End Carousel --}}
 
@@ -148,7 +149,6 @@
     }
   </script>
 <div> @include('footer')</div>
-
 </body>
 
 </html>

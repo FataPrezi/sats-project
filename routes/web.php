@@ -18,15 +18,27 @@ Route::get('/demo', function () {
 
 
 Route::get('/', function () {
-    return view('default');
+    return view('landing-page');
 });
 
-Route::get('/landing', function () {
-    return view('landing-page');
+Route::get('/activites', function () {
+    return view('activites');
+});
+
+Route::get('/default', function () {
+    return view('default');
 });
 
 Route::get('/profil', function () {
     return view('profile-page');
+});
+
+Route::get('/login', function () {
+    return view('login-page');
+});
+
+Route::get('/login2', function () {
+    return view('login-page2');
 });
 
 

@@ -1,5 +1,6 @@
 <!-- Navbar -->
 <!-- Navbar Info -->
+
 <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent "> 
         {{-- class="navbar navbar-expand-lg bg-info" --}}
         <div class="container">
@@ -15,40 +16,46 @@
           <div class="collapse navbar-collapse" id="example-navbar-info">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#pablo">
-                  <p>ACCUEIL</p>
+                <a class="nav-link" href="{{url('/')}}">
+                  <b><p>ACCUEIL</p></b>
                 </a>
               </li>
         
+              <li class="nav-item">
+                  <a class="nav-link" href="{{url('/activites')}}">
+                  <b><p>ACTIVITES</p></b>
+                  </a>
+                </li>
               
-              <li class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
-                     {{--  <i class="now-ui-icons design_app"></i> --}}
-                     <p> NOS ACTIVITES</p>
+             {{--  <li class="nav-item dropdown">
+                    <a href="{{url('/')}}" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+                       <i class="now-ui-icons design_app"></i> 
+                     <b><p> NOS ACTIVITES</p></b>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-                     <ul> <li> <b><a class="dropdown-item" href="./index.html">
-                        {{-- <i class="now-ui-icons business_chart-pie-36"></i> --}} MANUTENTION
-                      </a></b></li>
-                      <li> <b><a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
-                        {{-- <i class="now-ui-icons design_bullet-list-67"></i> --}} DOUANES
-                      </a></b> </li> 
-                      <li> <b><a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
-                        {{-- <i class="now-ui-icons design_bullet-list-67"></i> --}} LOGISTIQUE
-                      </a></b> </li>
-                      <li> <b><a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
-                        {{-- <i class="now-ui-icons design_bullet-list-67"></i> --}} SHIPPING
-                      </a></b> </li>
+                      <ul> <li> <a class="dropdown-item" href="./index.html">
+                         <i class="now-ui-icons business_chart-pie-36"></i>  MANUTENTION
+                      </a></li>
+                      <li> <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                         <i class="now-ui-icons design_bullet-list-67"></i>  DOUANES
+                      </a> </li> 
+                      <li> <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                         <i class="now-ui-icons design_bullet-list-67"></i> LOGISTIQUE
+                      </a> </li>
+                      <li> <a class="dropdown-item" target="_blank" href="https://demos.creative-tim.com/now-ui-kit/docs/1.0/getting-started/introduction.html">
+                         <i class="now-ui-icons design_bullet-list-67"></i>  SHIPPING
+                      </a> </li>
                     </ul>
                     </div>
-                  </li>
+                  </li> --}}
+                  
                   <li class="nav-item">
-                        <b><a class="nav-link" href="#pablo">
+                        <b><a class="nav-link" href="{{url('/login')}}">
                                 <p>NOUS REJOINDRE</p>
                         </a></b>
                       </li>
               <li class="nav-item">
-                    <b><a class="nav-link" href="#pablo">
+                    <b><a class="nav-link" href="https://www.sats.sn">
                   <p>CONNEXION</p>
                 </a></b>
               </li>
