@@ -68,7 +68,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h2 class="title">Qui sommes nous?</h2>
+            <h2 class="category text-primary">Qui sommes nous?</h2>
             <h4 class="">Le Syndicat des Auxiliaires de Transport du Sénégal est un syndicat d'entreprises issues de différents domaines tels que la manutention portuaire, la logistique, la douane et le shipping.</h4>
           </div>
         </div>
@@ -105,16 +105,16 @@
     </div> --}}
     <div class="section section-team text-center">
       <div class="container">
-        <h2 class="title">NOS ACTIVITES</h2>
+        <h2 class="category text-primary">NOS ACTIVITES</h2>
         <div class="team">
           <div class="row">
             <div class="col-md-3">
               <div class="team-player">
                 <img src="{{asset('../public/asset/assets/img/manutention.png')}}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                <h4 class="title">MANUTENTION</h4>
-                <p class="category text-primary">Model</p>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <h4 class="category text-primary">MANUTENTION</h4>
+                {{-- <p class="category text-primary">Model</p> --}}
+                <b><p class="">Pour les manutentionnaires et gestionnaires de terminaux.
+                  <a href="#">En savoir plus</a> </p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a> --}}
@@ -123,10 +123,10 @@
             <div class="col-md-3">
               <div class="team-player">
                 <img src="{{asset('../public/asset/assets/img/douanes.jpg')}}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                <h4 class="title">DOUANES</h4>
-                <p class="category text-primary">Designer</p>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <h4 class="category text-primary">DOUANES</h4>
+                {{-- <p class="category text-primary">Designer</p> --}}
+                <b><p class="">Pour les transitaires et les commissionnaires en douanes.
+                  <a href="#">En savoir plus</a></p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-linkedin"></i></a> --}}
               </div>
@@ -134,10 +134,10 @@
             <div class="col-md-3">
               <div class="team-player">
                 <img src="{{asset('../public/asset/assets/img/shipping2.jpg')}}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                <h4 class="title">SHIPPING</h4>
-                <p class="category text-primary">Fashion</p>
-                <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                  <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                <h4 class="category text-primary">SHIPPING</h4>
+                {{-- <p class="category text-primary">Fashion</p> --}}
+                <b><p class="">Pour les agents maritimes et consignataires.
+                  <a href="#">En savoir plus</a></p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a> --}}
@@ -146,10 +146,10 @@
             <div class="col-md-3">
                 <div class="team-player">
                   <img src="{{asset('../public/asset/assets/img/logistic.jpg')}}" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                  <h4 class="title">LOGISTIQUE</h4>
-                  <p class="category text-primary">Fashion</p>
-                  <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-                    <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                  <h4 class="category text-primary">LOGISTIQUE</h4>
+                 {{--  <p class="category text-primary">Fashion</p> --}}
+                  <b><p class="">Pour les transporteurs, et opérateurs logistiques.
+                    <a href="#">En savoir plus</a></p></b>
                   {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
                   <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
                   <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a> --}}
@@ -192,9 +192,7 @@
       </div>
     </div> --}}  
   </div>
-<footer>
-  <div> @include('footer')</div>
-</footer>
+  <footer > <div> @include('footer')</div> </footer>
   <!--   Core JS Files   -->
   <script src="{{asset('../public/asset/assets/js/core/jquery.min.js" type="text/javascript')}}"></script>
   <script src="{{asset('../public/asset/assets/js/core/popper.min.js" type="text/javascript')}}"></script>
