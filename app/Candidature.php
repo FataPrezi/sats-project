@@ -1,11 +1,10 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Candidature extends Model 
+class Candidature extends Eloquent 
 {
 
     protected $table = 'candidature';
@@ -14,6 +13,6 @@ class Candidature extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $fillable = array('id', 'nom', 'prenom', 'naissance', 'identification_nationale', 'statut', 'etudes', 'telephone', 'email');
+    protected $fillable = ['id', 'nom', 'prenom', 'naissance', 'identification_nationale', 'statut', 'etudes', 'telephone', 'email'];
 
 }

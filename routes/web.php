@@ -44,5 +44,6 @@ Route::get('/login2', function () {
 
 Route::resource('user', 'UserController');
 Route::resource('candidature', 'CandidatureController');
+Route::get('/candidatures/store', 'CandidatureController@store')->name('candidatures.store');
 Route::resource('information', 'InformationController');
 Route::resource('application', 'ApplicationController');

@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Candidature;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Validator;
+use Illuminate\Database\Eloquent\Model;
 
 class CandidatureController extends Controller 
 {
@@ -34,7 +37,43 @@ class CandidatureController extends Controller
    */
   public function store(Request $request)
   {
-    
+     // validation des donnees
+     /* $validatedData = $request->validate([
+      'facture_id' => 'required',
+      'montant' => 'required|numeric',
+      'type' => 'required',
+      'comptable' => 'required', 
+  ]); */
+ /*  $types=Type::get();
+  return view('candidature.create',compact('types'));
+*/
+   $candidature=new Candidature;
+   $candidature->nom = request ('nom');
+   $candidature->prenom = request ('prenom');
+   $candidature->naissance = request('naissance');
+  $candidature->identification_nationale = request ('identification_nationale');
+  $candidature->statut = request ('statut');
+  $candidature->etudes = request ('etudes');
+  $candidature->telephone = request ('telephone');
+  $candidature->email = request ('email');
+      $candidature->save();
+  return ("nouvelle candidature ajoutée avec succès");
+  return view ('login');
+
+   /*  $newcandidature = new candidature([
+      'facture' => $request('facture_id'),
+      'montant' => $request->('montant'),
+      'type' => $request->('type'),
+      'comptable' = $request->('comptable')
+  ]);
+  $newcandidature->save(); */
+ /*  $newcandidature = candidature::create ([
+      'facture' => request('facture_id'),
+       'montant' => request->('montant'),
+      'type' => request->('type'),
+      'comptable' => request->('comptable')
+  ]); */
+
   }
 
   /**
