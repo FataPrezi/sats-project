@@ -25,8 +25,28 @@ Route::get('/activites', function () {
     return view('activites');
 });
 
+Route::get('/manutention', function () {
+    return view('manutention');
+});
+
+Route::get('/douanes', function () {
+    return view('douanes');
+});
+
+Route::get('/shipping', function () {
+    return view('shipping');
+});
+
+Route::get('/logistique', function () {
+    return view('logistique');
+});
+
 Route::get('/default', function () {
     return view('default');
+});
+
+Route::get('/default2', function () {
+    return view('default2');
 });
 
 Route::get('/profil', function () {
@@ -45,5 +65,6 @@ Route::get('/login2', function () {
 Route::resource('user', 'UserController');
 Route::resource('candidature', 'CandidatureController');
 Route::get('/candidatures/store', 'CandidatureController@store')->name('candidatures.store');
+//Route::post('candidature', 'CandidatureController@store');
 Route::resource('information', 'InformationController');
 Route::resource('application', 'ApplicationController');

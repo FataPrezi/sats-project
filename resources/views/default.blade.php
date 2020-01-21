@@ -16,7 +16,7 @@
 
 -->
 <!DOCTYPE html>
-<html lang="en">
+ <html lang="en"> 
 
 <head>
   <meta charset="utf-8" />
@@ -37,7 +37,7 @@
   <link type="text/css" href="{{asset('../public/asset/assets/demo/demo.css')}}" rel="stylesheet" />
 </head>
 
-<body class="index-page sidebar-collapse">
+{{-- <body class="index-page sidebar-collapse"> --}}
   
   <div> @include('navbar')</div>
   
@@ -46,6 +46,14 @@
        <div class="page-header-image" data-parallax="true" style="background-image:url({{asset('../public/asset/assets/img/wallpaper6.jpg')}});">
       </div>  
       <div class="container">
+
+        {{-- Message à afficher si enregistrement candidature reussi --}}
+        @if(session()->has('message'))
+        <div class="alert alert-primary"> 
+          {{ session()->get('message') }}
+        </div>
+        @endif
+
         {{-- <div class="content-center brand">
            <img class="n-logo" src="{{asset('../public/asset/assets/img/now-logo.png')}}" alt=""> 
           <h3 class="h1-seo">SATS</h3>
@@ -149,6 +157,5 @@
     }
   </script>
 <div> @include('footer')</div>
-</body>
-
-</html>
+{{-- </body> --}}
+ </html> 

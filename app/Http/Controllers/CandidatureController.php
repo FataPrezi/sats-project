@@ -6,6 +6,7 @@ use App\Candidature;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Validator;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\RedirectResponse;
 
 class CandidatureController extends Controller 
 {
@@ -38,41 +39,38 @@ class CandidatureController extends Controller
   public function store(Request $request)
   {
      // validation des donnees
-     /* $validatedData = $request->validate([
-      'facture_id' => 'required',
-      'montant' => 'required|numeric',
-      'type' => 'required',
-      'comptable' => 'required', 
-  ]); */
- /*  $types=Type::get();
-  return view('candidature.create',compact('types'));
-*/
-   $candidature=new Candidature;
-   $candidature->nom = request ('nom');
-   $candidature->prenom = request ('prenom');
-   $candidature->naissance = request('naissance');
+       $validatedData = $request->validate(
+        [
+            'nom' => ['required','string','max:200'],
+            'prenom' => ['required','string','max:255'],
+            'naissance' => ['required','string','max:255'],
+            'identification_nationale' => ['required','string','max:500'],
+            'statut' => ['required','string','max:255'],
+            'etudes' => ['required','string','max:255'],
+            'telephone' => ['required','integer'],
+            'email' => ['required','email','max:50','unique:candidature,email'],
+        ]
+    ); 
+   // return view('login-page'); 
+
+//enregistrement des donnees dans la base
+  $candidature=new Candidature;
+  $candidature->nom = request ('nom');
+  $candidature->prenom = request ('prenom');
+  $candidature->naissance = request('naissance');
   $candidature->identification_nationale = request ('identification_nationale');
   $candidature->statut = request ('statut');
   $candidature->etudes = request ('etudes');
   $candidature->telephone = request ('telephone');
   $candidature->email = request ('email');
       $candidature->save();
-  return ("nouvelle candidature ajoutée avec succès");
-  return view ('login');
-
-   /*  $newcandidature = new candidature([
-      'facture' => $request('facture_id'),
-      'montant' => $request->('montant'),
-      'type' => $request->('type'),
-      'comptable' = $request->('comptable')
-  ]);
-  $newcandidature->save(); */
- /*  $newcandidature = candidature::create ([
-      'facture' => request('facture_id'),
-       'montant' => request->('montant'),
-      'type' => request->('type'),
-      'comptable' => request->('comptable')
-  ]); */
+      session()->flash('message','Candidature enregistrée avec succès');
+      return back();
+      
+      //return redirect('login')->with('key', 'You have done successfully');
+//flash("candidature enregistrée avec succès")->succes();
+      //return ("candidature enregistrée avec succès");
+//return redirect('/login');
 
   }
 

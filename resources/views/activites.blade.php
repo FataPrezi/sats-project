@@ -114,7 +114,7 @@
                 <h4 class="category text-primary">MANUTENTION</h4>
                 {{-- <p class="category text-primary">Model</p> --}}
                 <b><p class="">Pour les manutentionnaires et gestionnaires de terminaux.
-                  <a href="#">En savoir plus</a> </p></b>
+                  <a href="{{url('/manutention')}}">En savoir plus</a> </p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-instagram"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-facebook-square"></i></a> --}}
@@ -126,7 +126,7 @@
                 <h4 class="category text-primary">DOUANES</h4>
                 {{-- <p class="category text-primary">Designer</p> --}}
                 <b><p class="">Pour les transitaires et les commissionnaires en douanes.
-                  <a href="#">En savoir plus</a></p></b>
+                  <a href="{{url('/douanes')}}">En savoir plus</a></p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-linkedin"></i></a> --}}
               </div>
@@ -137,7 +137,7 @@
                 <h4 class="category text-primary">SHIPPING</h4>
                 {{-- <p class="category text-primary">Fashion</p> --}}
                 <b><p class="">Pour les agents maritimes et consignataires.
-                  <a href="#">En savoir plus</a></p></b>
+                  <a href="{{url('/shipping')}}">En savoir plus</a></p></b>
                 {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
                 <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a> --}}
@@ -149,7 +149,7 @@
                   <h4 class="category text-primary">LOGISTIQUE</h4>
                  {{--  <p class="category text-primary">Fashion</p> --}}
                   <b><p class="">Pour les transporteurs, et opérateurs logistiques.
-                    <a href="#">En savoir plus</a></p></b>
+                    <a href="{{url('/logistique')}}">En savoir plus</a></p></b>
                   {{-- <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
                   <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
                   <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a> --}}
@@ -192,7 +192,58 @@
       </div>
     </div> --}}  
   </div>
-  <footer > <div> @include('footer')</div> </footer>
+  <footer class="footer" data-background-color="black" >  
+      
+      <div class=" container ">
+        <nav>
+          <ul>
+            <li>
+              <a href="{{url('/activites')}}">
+                A Propos de nous
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Contacts
+              </a>
+            </li>
+            <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="#" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    <p class="d-lg-none d-xl-none">Twitter</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="#" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                    <p class="d-lg-none d-xl-none">Facebook</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <p class="d-lg-none d-xl-none">Instagram</p>
+                  </a>
+                </li>
+            {{-- <li>
+              <a href="http://blog.creative-tim.com">
+                Blog
+              </a>
+            </li> --}}
+          </ul>
+        </nav>
+        <div class="copyright" id="copyright">
+          &copy; SATS 2019
+          {{-- <script>
+            document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>, Designed by
+          <a href="#" target="_blank">SATS</a>. Coded by
+          <a href="https://www.creative-tim.com" target="_blank">SATS</a>. --}}
+        </div>
+      </div>
+
+  </footer>
+  {{-- <div> @include('footer')</div> --}}
   <!--   Core JS Files   -->
   <script src="{{asset('../public/asset/assets/js/core/jquery.min.js" type="text/javascript')}}"></script>
   <script src="{{asset('../public/asset/assets/js/core/popper.min.js" type="text/javascript')}}"></script>

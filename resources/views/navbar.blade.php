@@ -55,7 +55,7 @@
                         </a></b>
                       </li>
               <li class="nav-item">
-                    <b><a class="nav-link" href="https://www.sats.sn">
+                    <b><a class="nav-link" href="https://www.sats.sn/SATS">
                   <p>CONNEXION</p>
                 </a></b>
               </li>
