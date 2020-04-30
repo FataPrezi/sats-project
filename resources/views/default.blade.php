@@ -42,7 +42,7 @@
   <div> @include('navbar')</div>
   
    <div class="wrapper">
-     <div class="page-header clear-filter" filter-color="">
+     <div class="page-header clear-filter" filter-color="orange">
        <div class="page-header-image" data-parallax="true" style="background-image:url({{asset('../public/asset/assets/img/wallpaper6.jpg')}});">
       </div>  
       <div class="container">
